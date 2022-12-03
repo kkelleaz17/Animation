@@ -1,0 +1,102 @@
+body {
+    background: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .PACMAN{
+    border: 50px solid yellow;
+    position:absolute;
+    border-radius: 50%;
+    transform: rotateY(180deg);
+    animation: MOVETOEND 5s 2s infinite linear,HEADMOVE 1s infinite linear;
+    left:-120px
+  }
+
+  
+  .PACMAN2{
+    position:absolute;
+    background-image: url(MSPAC.png);
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transform: rotateZ(-90deg);
+    top:0px;
+    animation: MOVETOPDOWN  5s 5s infinite linear;
+    top:-120px;
+  }
+  .BOX{
+    width: calc(100vw / 3);
+    height: calc(100vh / 3);
+    position: absolute;
+  }
+  .BOX1{
+    border-right: 15px solid blue;
+    border-bottom: 15px solid blue;
+    top:0px;
+    left: 0px;
+  }
+  .BOX2{
+    border-left: 15px solid blue;
+    border-bottom: 15px solid blue;
+    top:0px;
+    right: 0px;
+  }
+  .BOX3{
+    border-right: 15px solid blue;
+    border-top: 15px solid blue;
+    bottom:0px;
+    left: 0px;
+  }
+  .BOX4{
+    border-left: 15px solid blue;
+    border-top: 15px solid blue;
+    bottom:0px;
+    right: 0px;
+  }
+
+
+  .GHOST{
+    position: absolute;
+    height: 100px;
+    width:  100px;
+  }
+  .GHOST2{
+    position: absolute;
+    height: 100px;
+    width:  100px;
+  }
+  .G1{
+    background-size: cover;
+    background-image: url("ghost.png");
+    animation: MOVETOEND 5s 3s infinite linear;
+    transform: rotateY(180deg);
+    left:-120px;
+  }
+  .G2{
+    background-size: cover;
+    background-image: url("ghost2.png");
+    animation: MOVETOPDOWN 5s 3s infinite linear;
+    top:-120px;
+  }
+
+  @keyframes MOVETOPDOWN {
+    0%{top:-120px}
+    100%{top:100vh}
+  }
+
+
+  @keyframes MOVETOEND{
+    0%{left:-120px;}
+    100%{left:120%;}
+  }
+
+  @keyframes HEADMOVE{
+    0%{  border-left: 50px solid transparent;}
+    50%{  border-left: 50px solid transparent;}
+    51%{  border-left: 50px solid yellow;}
+    100%{  border-left: 50px solid yellow;}
+  }
