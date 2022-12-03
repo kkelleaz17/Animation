@@ -71,14 +71,14 @@ body {
   }
   .G1{
     background-size: cover;
-    background-image: url("ghost.png");
+    background-image: url("./ghost.png");
     animation: MOVETOEND 5s 3s infinite linear;
     transform: rotateY(180deg);
     left:-120px;
   }
   .G2{
     background-size: cover;
-    background-image: url("ghost2.png");
+    background-image: url("./ghost2.png");
     animation: MOVETOPDOWN 5s 3s infinite linear;
     top:-120px;
   }
